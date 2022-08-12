@@ -1,0 +1,21 @@
+ int majorityElement(vector<int> &nums)
+    {
+        int count = 0, major;
+        for (auto a : nums)
+        {
+            if (count == 0)
+            {
+                major = a;
+                count = 1;
+            }
+            else if (major == a)
+            {
+                count++;
+            }
+            else
+            {
+                count--;
+            }
+        }
+        return major;
+    }
